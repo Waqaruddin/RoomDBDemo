@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(p0: View?) {
         button_create.setOnClickListener {startActivity(Intent(this, CreateActivity::class.java))  }
         button_update.setOnClickListener { startActivity(Intent(this, UpdateActivity::class.java)) }
-//        button_read.setOnClickListener { startActivity(Intent(this, DeleteActivity::class.java)) }
+        button_read.setOnClickListener { startActivity(Intent(this, ReadActivity::class.java)) }
         button_delete.setOnClickListener {startActivity(Intent(this, DeleteActivity::class.java))  }
 
     }

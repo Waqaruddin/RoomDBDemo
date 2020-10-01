@@ -1,9 +1,6 @@
 package com.example.roomdemo.database
 
-import androidx.room.Dao
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Update
+import androidx.room.*
 
 @Dao
 interface MyDao {
@@ -15,5 +12,11 @@ interface MyDao {
 
     @Update
     fun updateEmployee(employee: Employee)
+
+    @Query("select * from emp_table")
+    fun readEmployee():List<Employee>
+
+    @Query("select * from emp_table where id =  :id")
+    fun readEmployeeById(id:Int): Employee
 
 }

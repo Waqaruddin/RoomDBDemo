@@ -1,4 +1,4 @@
-package com.example.roomdemo
+package com.example.roomdemo.database
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
@@ -10,8 +10,8 @@ data class Employee(
     var id:Int,
 
     @ColumnInfo(name = "first_name")
-    var name:String,
-    var email:String
+    var name:String? = null,
+    var email:String? = null
 
 
 )
